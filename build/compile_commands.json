@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/bc-trail_autogen/mocs_compilation.cpp.o -c /home/user/Documents/bc-trail/build/bc-trail_autogen/mocs_compilation.cpp",
+  "file": "/home/user/Documents/bc-trail/build/bc-trail_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/bc-trail.dir/bc-trail_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/main.cpp.o -c /home/user/Documents/bc-trail/src/main.cpp",
+  "file": "/home/user/Documents/bc-trail/src/main.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/fsm_controller.cpp.o -c /home/user/Documents/bc-trail/src/fsm_controller.cpp",
+  "file": "/home/user/Documents/bc-trail/src/fsm_controller.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/fsm_controller.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/gimbal_controller.cpp.o -c /home/user/Documents/bc-trail/src/gimbal_controller.cpp",
+  "file": "/home/user/Documents/bc-trail/src/gimbal_controller.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/gimbal_controller.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/tracker_interface.cpp.o -c /home/user/Documents/bc-trail/src/tracker_interface.cpp",
+  "file": "/home/user/Documents/bc-trail/src/tracker_interface.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/tracker_interface.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/joystick_interface.cpp.o -c /home/user/Documents/bc-trail/src/joystick_interface.cpp",
+  "file": "/home/user/Documents/bc-trail/src/joystick_interface.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/joystick_interface.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/control_loop.cpp.o -c /home/user/Documents/bc-trail/src/control_loop.cpp",
+  "file": "/home/user/Documents/bc-trail/src/control_loop.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/control_loop.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/src/main_window.cpp.o -c /home/user/Documents/bc-trail/src/main_window.cpp",
+  "file": "/home/user/Documents/bc-trail/src/main_window.cpp",
+  "output": "CMakeFiles/bc-trail.dir/src/main_window.cpp.o"
+},
+{
+  "directory": "/home/user/Documents/bc-trail/build",
+  "command": "/usr/bin/g++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/user/Documents/bc-trail/build/bc-trail_autogen/include -I/home/user/Documents/bc-trail/include -I/home/user/Documents/bc-trail/advantech/inc -isystem /usr/include/qt6/QtCore -isystem /usr/include/qt6 -isystem /usr/lib64/qt6/mkspecs/linux-g++ -isystem /usr/include/qt6/QtWidgets -isystem /usr/include/qt6/QtGui -isystem /usr/include/SDL2 -g -std=gnu++17 -o CMakeFiles/bc-trail.dir/bc-trail_autogen/3YJK5W5UP7/qrc_bc-trail.cpp.o -c /home/user/Documents/bc-trail/build/bc-trail_autogen/3YJK5W5UP7/qrc_bc-trail.cpp",
+  "file": "/home/user/Documents/bc-trail/build/bc-trail_autogen/3YJK5W5UP7/qrc_bc-trail.cpp",
+  "output": "CMakeFiles/bc-trail.dir/bc-trail_autogen/3YJK5W5UP7/qrc_bc-trail.cpp.o"
+}
+]

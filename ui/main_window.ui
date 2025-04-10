@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BC-TRAIL Control System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="joystickTab">
+       <attribute name="title">
+        <string>Joystick Input</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="joystickTabLayout">
+        <item>
+         <layout class="QHBoxLayout" name="joystickSelectionLayout">
+          <item>
+           <widget class="QLabel" name="joystickLabel">
+            <property name="text">
+             <string>Select Joystick:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="joystickComboBox"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="refreshJoystickButton">
+            <property name="text">
+             <string>Refresh</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="calibrateButton">
+            <property name="text">
+             <string>Calibrate</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="joystickInfoLabel">
+          <property name="text">
+           <string>No joystick selected</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="joystickInputsScrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>758</width>
+             <height>390</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="joystickInputsLayout"/>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fsmTab">
+       <attribute name="title">
+        <string>FSM Control</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="fsmTabLayout">
+        <item>
+         <widget class="QGroupBox" name="fsmJoystickMappingGroup">
+          <property name="title">
+           <string>Joystick to FSM Mapping</string>
+          </property>
+          <layout class="QGridLayout" name="fsmMappingLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="fsmXAxisLabel">
+             <property name="text">
+              <string>X-Axis:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="fsmXAxisComboBox"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="fsmInvertXCheckbox">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="fsmYAxisLabel">
+             <property name="text">
+              <string>Y-Axis:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="fsmYAxisComboBox"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="fsmInvertYCheckbox">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="fsmDeadzoneLabel">
+             <property name="text">
+              <string>Deadzone:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="fsmDeadzoneSpinBox">
+             <property name="suffix">
+              <string>%</string>
+             </property>
+             <property name="maximum">
+              <number>50</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fsmStatusGroup">
+          <property name="title">
+           <string>FSM Status</string>
+          </property>
+          <layout class="QGridLayout" name="fsmStatusLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="fsmXPosLabel">
+             <property name="text">
+              <string>X Position:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QProgressBar" name="fsmXProgressBar">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="format">
+              <string>%v</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="fsmYPosLabel">
+             <property name="text">
+              <string>Y Position:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QProgressBar" name="fsmYProgressBar">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="format">
+              <string>%v</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="enableFsmOutputCheckbox">
+          <property name="text">
+           <string>Enable FSM Output</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="fsmSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gimbalTab">
+       <attribute name="title">
+        <string>Gimbal Control</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="gimbalTabLayout">
+        <item>
+         <widget class="QGroupBox" name="gimbalJoystickMappingGroup">
+          <property name="title">
+           <string>Joystick to Gimbal Mapping</string>
+          </property>
+          <layout class="QGridLayout" name="gimbalMappingLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="azimuthAxisLabel">
+             <property name="text">
+              <string>Azimuth:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QComboBox" name="azimuthAxisComboBox"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QCheckBox" name="invertAzimuthCheckbox">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="elevationAxisLabel">
+             <property name="text">
+              <string>Elevation:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="elevationAxisComboBox"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QCheckBox" name="invertElevationCheckbox">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="auxElevationAxisLabel">
+             <property name="text">
+              <string>Aux Elevation:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="auxElevationAxisComboBox"/>
+           </item>
+           <item row="2" column="2">
+            <widget class="QCheckBox" name="invertAuxElevationCheckbox">
+             <property name="text">
+              <string>Invert</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="gimbalDeadzoneLabel">
+             <property name="text">
+              <string>Deadzone:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="gimbalDeadzoneSpinBox">
+             <property name="suffix">
+              <string>%</string>
+             </property>
+             <property name="maximum">
+              <number>50</number>
+             </property>
+             <property name="value">
+              <number>5</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="gimbalStatusGroup">
+          <property name="title">
+           <string>Gimbal Status</string>
+          </property>
+          <layout class="QGridLayout" name="gimbalStatusLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="azimuthPosLabel">
+             <property name="text">
+              <string>Azimuth:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QProgressBar" name="azimuthProgressBar">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="format">
+              <string>%v</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="elevationPosLabel">
+             <property name="text">
+              <string>Elevation:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QProgressBar" name="elevationProgressBar">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="format">
+              <string>%v</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="auxElevationPosLabel">
+             <property name="text">
+              <string>Aux Elevation:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QProgressBar" name="auxElevationProgressBar">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="format">
+              <string>%v</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="enableGimbalOutputCheckbox">
+          <property name="text">
+           <string>Enable Gimbal Output</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="gimbalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="trackingTab">
+       <attribute name="title">
+        <string>Tracking</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="trackingTabLayout">
+        <item>
+         <widget class="QGroupBox" name="trackingModeGroup">
+          <property name="title">
+           <string>Tracking Mode</string>
+          </property>
+          <layout class="QVBoxLayout" name="trackingModeLayout">
+           <item>
+            <widget class="QRadioButton" name="coarseTrackingRadio">
+             <property name="text">
+              <string>Coarse Tracking (Manual Gimbal and FSM)</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="fineTrackingRadio">
+             <property name="text">
+              <string>Fine Tracking (Manual FSM Only)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="autoTrackingRadio">
+             <property name="text">
+              <string>Auto Tracking (Tracker Card)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="trackerStatusGroup">
+          <property name="title">
+           <string>Tracker Status</string>
+          </property>
+          <layout class="QGridLayout" name="trackerStatusLayout">
+           <item row="0" column="0">
+            <widget class="QLabel" name="trackerXErrorLabel">
+             <property name="text">
+              <string>X Error:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="trackerXErrorEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="trackerYErrorLabel">
+             <property name="text">
+              <string>Y Error:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="trackerYErrorEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="trackerStateLabel">
+             <property name="text">
+              <string>Track State:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="trackerStateEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="trackerControlLayout">
+          <item>
+           <widget class="QPushButton" name="trackerInitButton">
+            <property name="text">
+             <string>Initialize Tracker</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="trackerPingButton">
+            <property name="text">
+             <string>Ping Tracker</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="trackerAutoPollCheckbox">
+            <property name="text">
+             <string>Auto Poll</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="dataLoggingGroup">
+          <property name="title">
+           <string>Data Logging</string>
+          </property>
+          <layout class="QHBoxLayout" name="dataLoggingLayout">
+           <item>
+            <widget class="QLineEdit" name="logFileEdit">
+             <property name="placeholderText">
+              <string>Select log file location...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="browseLogButton">
+             <property name="text">
+              <string>Browse</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="startStopLoggingButton">
+             <property name="text">
+              <string>Start Logging</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="trackingSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="statusGroup">
+      <property name="title">
+       <string>System Status</string>
+      </property>
+      <layout class="QHBoxLayout" name="statusLayout">
+       <item>
+        <widget class="QLabel" name="statusLabel">
+         <property name="text">
+          <string>System Ready</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="resetButton">
+         <property name="text">
+          <string>Reset System</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

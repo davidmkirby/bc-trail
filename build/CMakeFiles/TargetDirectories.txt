@@ -1,0 +1,8 @@
+/home/user/Documents/bc-trail/build/CMakeFiles/bc-trail.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/edit_cache.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/rebuild_cache.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/list_install_components.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/install.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/install/local.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/install/strip.dir
+/home/user/Documents/bc-trail/build/CMakeFiles/bc-trail_autogen.dir

@@ -1,0 +1,60 @@
+I need you to create a complete implementation of a project called BC-TRAIL, which is a control system for Fast-Steering Mirrors (FSM) and gimbals with automatic tracking capabilities. You should generate all necessary code and configuration files.
+
+# Project Overview
+BC-TRAIL is a multi-mode control system that manages both a Fast-Steering Mirror and a 3-stage gimbal. It includes:
+- Real-time closed-loop control at 1000 Hz using FSM feedback
+- Joystick input for controlling both systems
+- Automatic tracking using EO Imaging/Moog 7007 tracker card data
+- Mode switching between three states: "coarse track" (manual gimbal and FSM), "fine track" (manual FSM only), and "auto track" (using tracker card X/Y error signals)
+- Visualization of system status and performance
+
+# Technical Specifications
+- Hardware:
+  - PCIE-1816 DAQ card for FSM control (analog input/output)
+  - PCIE-1824 DAQ card for 3-axis gimbal control
+  - EO Imaging/Moog 7007 tracker card providing X/Y track errors
+  - Fast-Steering Mirror with ±10V input/output range
+  - 3-stage gimbal (azimuth, elevation, auxiliary elevation)
+  - Joystick with button for mode switching
+
+- Development Environment:
+  - Rocky Linux 9.5 with real-time kernel
+  - Qt6 framework
+  - CMake build system
+  - C++ programming language
+
+# Implementation Requirements
+1. Base the analog input implementation on the Advantech AI_AsynOneBufferedAI_TDtr example
+2. Use the Advantech AO_StaticAO example for analog output to the FSM and gimbal
+   - The PCIE-1824 for gimbal control can only use AO_StaticAO
+   - AO_StaticAO provides the most direct approach for real-time control loop updates
+   - Advantech provides example Qt code for AO_StaticAO that should be leveraged
+3. Utilize the Advantech library (advantech/inc/bdaqctrl.h) for enum and error handling
+4. Design for real-time kernel operations, including:
+   - Proper thread priorities
+   - Minimized context switching
+   - Deterministic timing guarantees
+   - Prevention of priority inversion
+5. Include integration with the EO Imaging/Moog 7007 tracker card
+   - Implementation will use a polling approach to get X/Y track errors
+   - These errors will drive the control loop in auto track mode
+6. Extend it to include:
+   - Analog output for FSM control
+   - Interface for the PCIE-1824 gimbal control
+   - Closed-loop feedback processing
+   - Mode switching between coarse, fine, and auto tracking modes
+   - Tracker data integration into the control loop
+
+7. The control loop must maintain 1000 Hz sampling/output rate
+8. The system must handle smooth transitions between all control modes
+9. Implement appropriate error handling and system status monitoring
+
+# Deliverables
+Please provide:
+1. Complete CMakeLists.txt for building the project
+2. All required header (.h) and implementation (.cpp) files
+3. UI definition files (.ui) for Qt interfaces
+4. Resource files and configurations
+5. Implementation comments and documentation
+
+The code should be well-structured, documented, and follow best practices for real-time control systems. Start with a clear project structure and organization before diving into implementation details.

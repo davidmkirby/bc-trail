@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RCC>
+    <qresource prefix="/">
+        <file>icons/coarse-track.svg</file>
+        <file>icons/fine-track.svg</file>
+        <file>icons/auto-track.svg</file>
+        <file>icons/reset.svg</file>
+        <file>icons/joystick.svg</file>
+        <file>icons/fsm.svg</file>
+        <file>icons/gimbal.svg</file>
+        <file>icons/tracker.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+2125e1fbf4b220775a52a08b976ca76b CMakeFiles/bc-trail_autogen
+2f91572979a4b1f7154ab604fd2ca089 bc-trail_autogen/3YJK5W5UP7/qrc_bc-trail.cpp

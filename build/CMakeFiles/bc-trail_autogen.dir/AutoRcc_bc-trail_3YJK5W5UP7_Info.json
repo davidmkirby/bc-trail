@@ -1,0 +1,29 @@
+{
+	"BUILD_DIR" : "/home/user/Documents/bc-trail/build/bc-trail_autogen",
+	"CMAKE_BINARY_DIR" : "/home/user/Documents/bc-trail/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/user/Documents/bc-trail/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/user/Documents/bc-trail",
+	"CMAKE_SOURCE_DIR" : "/home/user/Documents/bc-trail",
+	"INCLUDE_DIR" : "/home/user/Documents/bc-trail/build/bc-trail_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/user/Documents/bc-trail/resources/icons/fine-track.svg",
+		"/home/user/Documents/bc-trail/resources/icons/auto-track.svg",
+		"/home/user/Documents/bc-trail/resources/icons/joystick.svg",
+		"/home/user/Documents/bc-trail/resources/icons/tracker.svg",
+		"/home/user/Documents/bc-trail/resources/icons/gimbal.svg",
+		"/home/user/Documents/bc-trail/resources/icons/coarse-track.svg",
+		"/home/user/Documents/bc-trail/resources/icons/reset.svg",
+		"/home/user/Documents/bc-trail/resources/icons/fsm.svg"
+	],
+	"LOCK_FILE" : "/home/user/Documents/bc-trail/build/CMakeFiles/bc-trail_autogen.dir/AutoRcc_bc-trail_3YJK5W5UP7_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "bc_trail" ],
+	"OUTPUT_CHECKSUM" : "3YJK5W5UP7",
+	"OUTPUT_NAME" : "qrc_bc-trail.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib64/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/user/Documents/bc-trail/build/CMakeFiles/bc-trail_autogen.dir/AutoRcc_bc-trail_3YJK5W5UP7_Used.txt",
+	"SOURCE" : "/home/user/Documents/bc-trail/resources/bc-trail.qrc",
+	"VERBOSITY" : 0
+}
